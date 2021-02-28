@@ -27,8 +27,7 @@ Route::prefix('category')->group(function () {
     Route::get('/{id}', [ProductController::class,'product']);
 });
 
-Route::get('/news/{id?}', function($id) {
-    Route::get('/news/{id?}', [NewsController::class,'news']);
+Route::get('/news/{id?}', [NewsController::class, 'news']);
 
 Route::prefix('program')->group(function () {
     Route::get('/{id}', [ProgramController::class,'program']);
